@@ -37,7 +37,7 @@ clean:
 	@rm -rf $(OBJS) $(foreach name,$(TARGETS),$(addprefix $(name).,bin elf)) stage2.elf32.gz stage2.elf32.7z
 	
 dist: clean all
-	@rm XeLL_Reloaded-2stages-*.tar.gz
+	@rm -rf XeLL_Reloaded-2stages-*.tar.gz
 	@mkdir -p release/_DEBUG
 	@cp *.bin release/
 	@gunzip *.gz
